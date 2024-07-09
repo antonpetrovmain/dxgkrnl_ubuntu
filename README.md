@@ -24,7 +24,7 @@ Use Ubuntu on Hyper-V virtual machine with dxgrknl (GPU-P) support.
 ```powershell
 $vm = "ubuntu"
 Remove-VMGpuPartitionAdapter -VMName $vm
-$gpu_list = Get-VMHostPartitionableGpu
+$gpu_list = Get-VMHostAssignableDevice
 foreach ($k in $gpu_list){
     $instance_path = $k.Name
     $instance_path
